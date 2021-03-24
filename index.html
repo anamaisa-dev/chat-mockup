@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mensagens</title>
+</head>
+<body>
+    
+    <header>
+        <img src="./assets/back.png" alt="botão voltar" class="voltar">
+        <img src="./assets/avatar.jpg" alt="foto do contato" class="fotoContato">
+
+        <div class="nomeEVisto">
+            <h1>Adriana Gonçalves</h1>
+            <h2>visto por último 14:30</h2>
+        </div>
+
+        <img src="./assets/menu.png" alt="menu" class="menu">
+    </header>
+
+    <main>
+        <div id="mensagensContainer"></div>
+    </main>
+
+    <footer>
+        <img src="./assets/emoji.png" alt="emoji" class="emoji">
+        <input onkeypress="detectar(event)" id="inputEnviar" 
+            type="text" name="inputEnviar" placeholder="Digite sua mensagem"
+        >
+        <img 
+            onclick="clicarEnviar()"  class="botaoEnviar" 
+            src="./assets/enviar.png" alt="enviar"
+        >
+    </footer>
+    <script src="./script.js"></script>   
+</body>
+</html>

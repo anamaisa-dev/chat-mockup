@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --var-azul: #426A8C;
+    --var-cinza-claro: #A3B2BF;
+    --var-cinza-medio: #617C8C;
+    --var-cinza-medio-escuro: #395059;
+    --var-cinza-escuro: #162526;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+header, main, footer {
+    width: 550px;
+    margin: auto;
+    padding: 10px 1%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--var-azul);
+    position: sticky;
+    top: 0;
+}
+
+header img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.fotoContato {
+    height: 75px;
+    border-radius: 50%;
+}
+
+.nomeEVisto {
+    width: 70%;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+main {
+    overflow-y: scroll;
+    height: calc(100vh - 165px);
+    padding-top: 5px;
+    background-color: var(--var-cinza-escuro);
+}
+
+.mensagem {
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+
+.texto {
+    width: 97%;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.recebida {
+    background-color: var(--var-cinza-medio-escuro);
+    border-radius: 15px 15px 15px 0;
+}
+
+.enviada {
+    margin-left: auto;
+    background-color: var(--var-cinza-medio);
+    border-radius: 15px 15px 0 15px;
+}
+
+.horario, h2 {
+    color: var(--var-cinza-claro);
+}
+
+.horario {
+    text-align: right;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--var-cinza-medio-escuro);
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.267);
+}
+
+footer img {
+    height: 35px;
+    cursor: pointer;
+}
+
+#inputEnviar {
+    width: 100%;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.15rem;
+    color: #fff;
+    background-color: var(--var-cinza-medio-escuro);
+}
+
+#inputEnviar:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color: var(--var-cinza-claro);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: var(--var-cinza-escuro);
+    }
+
+    header, main, footer {
+        width: 96%; /* tem 2 % de padding */
+        padding: 10px 2%; 
+    }
+
+    header img {
+        height: 25px;
+    }
+
+    .fotoContato {
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        height: calc(100vh - 149px);
+    }
+
+    .texto {
+        width: 99.25%;
+    }
+
+    .horario {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header img {
+        height: 25px;
+    }
+
+    .fotoContato {
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    main {
+        height: calc(100vh - 144px);
+    }
+
+    .texto {
+        font-size: 1.05rem;
+    }
+
+    #inputEnviar {
+        font-size: 1rem;
+    }
+
+}
